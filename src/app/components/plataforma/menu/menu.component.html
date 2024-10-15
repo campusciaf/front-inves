@@ -1,0 +1,87 @@
+<nav class="row navbar navbar-expand-lg nav-plataforma fixed-top">
+
+    <div class="col-6 col-md-6 col-lg-3 col-xl-2">
+      <div class="row">
+        <div class="col-auto align-self-center">
+          <button class="btn" (click)="clickEvent()"><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div class="col-auto ">
+          <a class="navbar-brand m-0 p-0" routerLink="/login">
+            <div class="row">
+                <div class="col-auto"><span class="logo-icon"><img src="assets/img/logo.webp" class="mx-100" alt=""></span></div>
+                <div class="col ps-0 align-self-center lh-16">
+                    <div class="fw-normal color-2 fs-14">Creatividad</div>
+                    <div class="fs-12 text-secondary fw-normal">Innovación</div>
+                    <div class="fs-12 text-secondary fw-normal">Sociedad</div>
+                </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-8 col-lg-6 col-xl-8 collapse navbar-collapse">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active pointer" aria-current="page" (click)="setThema('dark')">Dark</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active pointer" aria-current="page" (click)="setThema('light')">Light</a>
+        </li>
+        <li class="nav-item dropdown">
+
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+        
+      </ul>
+    </div>
+
+    <div class="col-6 col-md-6 col-lg-3 col-xl-2 d-flex justify-content-end">
+      <div ngbDropdown class="d-inline-block droplogout">
+        <button type="button" class="btn" id="dropdownBasic1" ngbDropdownToggle>
+          <div class="row">
+            <div class="col-auto align-self-center">
+                <figure class="avatar avatar-40 rounded-circle coverimg vm" style="background-image: url(assets/img/null.webp);">
+                    <img src="assets/img/null.webp" alt="" id="userphotoonboarding2" style="display: none;">
+                </figure>
+            </div>
+            <div class="col ps-0 align-self-center d-lg-block">
+                <p class="mb-0">
+                    <span class="text-dark username">{{user_name}}</span><br>
+                    <small class="small">United States</small>
+                </p>
+            </div>
+            <div class="col ps-0 align-self-center  d-lg-block">
+              <i class="fa-solid fa-chevron-down"></i>
+          </div>
+        </div>
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem routerLink="/miperfil">Mi Perfil</button>
+          <button ngbDropdownItem>Mi Dashboard</button>
+          <button ngbDropdownItem (click)="logAutUser()">Salir</button>
+        </div>
+      </div>
+    </div>
+
+
+</nav>
+
+<div class="d-flex" id="wrapper">
+
+  <!-- Sidebar -->
+  <div class="bg-light border-right sidebar" id="sidebar-wrapper"  [ngClass]="status ? 'hide' : 'show'">
+    <div class="sidebar-heading">Navegación </div>
+    <div class="list-group list-group-flush">
+      <a routerLink="/dashboard" class="list-group-item list-group-item-action bg-light"><i class="fa-solid fa-chart-simple"></i> Dashboard</a>
+      <a routerLink="/usuarios" class="list-group-item list-group-item-action bg-light"><i class="fa-regular fa-user"></i> Usuarios</a>
+
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
+
+
+
+</div>
+<!-- /#wrapper -->

@@ -6,5 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'front-inv';
+  title = 'Ciaf investiga';
+
+  ngOnInit(): void {
+  const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  const userPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+    if (userPrefersDark) {
+      this.setThema('dark')
+    }
+    if (userPrefersLight) {
+      this.setThema('light')
+    }
+  }
+  
+  setThema(t: string) {
+
+    document.documentElement.className = t;
+  }
+
 }

@@ -1,0 +1,115 @@
+<app-menu></app-menu>
+<content>
+    <div class="content row mx-0">
+        <div class="col-12">
+            <h2 class="fs-20">Usuarios</h2>
+        </div>
+        <div class="col-12">
+            <div class="title col-12">Basic Details</div>
+        </div>
+
+        <form class="col-12 mb-4 text-start" [formGroup]="formEditar" (ngSubmit)="putForm()">
+
+
+            <div class="row">
+
+                <div class="col-4 form-group mb-2 position-relative check-valid text-dark is-valid">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text text-theme border-end-0"><i class="fa-regular fa-user"></i></span>
+                        <div class="form-floating">
+                            <input class="form-control border-start-0" placeholder="" type="text" formControlName="user_name" >
+                            <label>Nick</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-4 form-group mb-2 position-relative check-valid text-dark is-valid">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text text-theme border-end-0"><i class="fa-regular fa-envelope"></i></span>
+                        <div class="form-floating">
+                            <input class="form-control border-start-0" placeholder="" type="email"  formControlName="user_email" >
+                            <label>Correo Electrónico</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 form-group mb-2 position-relative check-valid text-dark is-valid">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text text-theme border-end-0"><i class="fa-solid fa-mobile-screen"></i></span>
+                        <div class="form-floating">
+                            <input class="form-control border-start-0" placeholder="" type="text"  formControlName="user_tel" >
+                            <label>Número contacto</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 form-group mb-2 position-relative check-valid text-dark is-valid">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text text-theme border-end-0"><i class="fa-solid fa-user"></i></span>
+                        <div class="form-floating">
+                            <input class="form-control border-start-0" placeholder="" type="text" formControlName="firstname" >
+                            <label>Primer Nombre</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 form-group mb-2 position-relative check-valid text-dark is-valid">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text text-theme border-end-0"><i class="fa-solid fa-user"></i></span>
+                        <div class="form-floating">
+                            <input class="form-control border-start-0" placeholder="" type="text" formControlName="middlename" >
+                            <label>Segundo Nombre</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 form-group mb-2 position-relative check-valid text-dark is-valid">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text text-theme border-end-0"><i class="fa-solid fa-user"></i></span>
+                        <div class="form-floating">
+                            <input class="form-control border-start-0" placeholder="" type="text" formControlName="lastname" >
+                            <label>Primer Apellido</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 form-group mb-2 position-relative check-valid text-dark is-valid">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text text-theme border-end-0"><i class="fa-brands fa-facebook-f"></i></span>
+                        <div class="form-floating">
+                            <input class="form-control border-start-0" placeholder="" type="text" formControlName="facebook" >
+                            <label>Cuenta de facebook</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 form-group mb-2 position-relative check-valid text-dark is-valid">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text text-theme border-end-0"><i class="fa-solid fa-location-dot"></i></span>
+                        <div class="form-floating">
+                            <input class="form-control border-start-0" placeholder="" type="text" formControlName="addres1" >
+                            <label>Dirección principal</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 form-group mb-2 position-relative check-valid text-dark is-valid">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text text-theme border-end-0"><i class="fa-solid fa-location-pin"></i></span>
+                        <div class="form-floating">
+                            <input class="form-control border-start-0" placeholder="" type="text" formControlName="addres2" >
+                            <label>Segunda dirección</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 form-group mb-2 position-relative check-valid text-dark is-valid">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-text text-theme border-end-0"><i class="fa-solid fa-location-arrow"></i></span>
+                        <div class="form-floating">
+                            <input class="form-control border-start-0" placeholder="" type="text" formControlName="codezip" >
+                            <label>Codigo Zip</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="btn btn-success" type="submit" ><i class="fa-solid fa-arrow-right"></i> Actualizar</button>
+
+       
+        </form>
+    </div>
+</content>

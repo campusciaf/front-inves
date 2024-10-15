@@ -1,1 +1,201 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+
+:root,
+:root.light {
+	--bg-w-1: 0, 21, 80;
+    --bg-w-2: #001550;
+    --bg-body: #eef3fc;
+    --bg-1: 238,243,252;
+    --bg-2: #fff;
+    --bg-3: #5c6798;
+    --bg-4: #001550;
+    --bg-ico: 21, 33, 90;
+    --tono-1: #666666;
+    --tono-2: #000;
+    --bg-hr: 21, 33, 90;
+    --text-ico-1: #15215a;
+}
+
+:root.dark {
+    --bg-body: #000;
+}
+
+body { 
+    margin: 0; 
+    font-family: "Noto Sans", sans-serif; 
+    color: var(--tono-1);
+    background-color: var(--bg-body)
+}
+.main{
+    padding-top: 78px;
+}
+
+.header > .navbar {
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 20px 20px;
+}
+.navbar-brand .logo-icon {
+    padding: 5px;
+    line-height: 40px;
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+    background-color: var(--bg-w-2);
+    width: 50px;
+
+}
+.logo-icon img{
+width: 20px;
+}
+.navbar{
+    background: linear-gradient(180deg, rgba(0, 21, 80, 0.95) 0%, rgba(var(--bg-1), 0.8) 100%);
+}
+
+.coverimg, .product-tour-js-single-step .product-tour-js-image {
+    background-size: cover;
+    background-position: center center;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    background-position: 50% 50%;
+    z-index: -1;
+}
+
+.footer {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75em;
+    z-index: 1;
+    flex-shrink: 0;
+    background-color: var(--bg-3);
+    border-radius: 20px 20px 0 0;
+    position: absolute;
+    bottom: 0px;
+}
+
+
+/* ************** hasta aqui web *******************************/
+
+.content{
+    padding: 86px 0px 0px 20px;
+}
+.pointer{
+    cursor: pointer;
+}
+.color-1{
+    color: var(--tono-1);
+}
+.color-2{
+    color: var(--tono-2);
+}
+.bg-light-theme {
+    background-color: rgba(var(--bg-ico), 0.15) !important;
+    color: var(--text-ico-1);
+}
+
+.nav-plataforma {
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 20px 20px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(var(--bg-1), 0.8) 100%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 20px 20px;
+}
+
+.sidebar {
+    background-color: var(--bg-2) !important;
+    box-shadow: 3px 0px 8px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+    line-height: 34px;
+    margin-bottom: 20px;
+    position: relative;
+    border-bottom: 1px solid rgba(var(--bg-hr), 0.1);
+
+}
+.title:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 3px;
+    border-radius: 2px;
+    width: 25px;
+    display: block;
+    background-color: var(--bg-4);
+    
+}
+/* ****** tamaño de texto ******* **/
+.fs-10{
+	font-size: 10px !important;
+}
+.fs-12{
+	font-size: 12px !important;
+}
+.fs-14{
+	font-size: 14px !important;
+}
+.fs-16{
+	font-size: 16px !important;
+}
+.fs-18{
+	font-size: 18px !important;
+}
+.fs-20{
+	font-size: 20px !important;
+}
+.fs-22{
+	font-size: 22px !important;
+}
+.fs-24{
+	font-size: 24px !important;
+}
+.fs-28{
+	font-size: 28px !important;
+}
+.fs-32{
+	font-size: 32px !important;
+}
+.fs-36{
+	font-size: 36px !important;
+}
+.fs-48{
+	font-size: 48px !important;
+}
+/*  *******fin **/
+
+.lh-16 {
+    line-height: 16px !important;
+}
+.card-header{
+    padding-top: 20px;
+    background-color: var(--bg-2) !important; 
+}
+.avatar {
+    position: relative;
+    display: inline-flex;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    line-height: 40px;
+    height: 40px;
+    width: 40px;
+}
+
+.droplogout .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+    display: none;
+}

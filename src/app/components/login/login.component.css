@@ -1,0 +1,13 @@
+.bg-gradient-danger {
+    background: linear-gradient(87deg,#f5365c 0,#f56036 100%)!important;
+}
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+
+}
+

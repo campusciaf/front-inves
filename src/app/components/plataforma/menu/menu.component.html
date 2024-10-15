@@ -6,13 +6,12 @@
           <button class="btn" (click)="clickEvent()"><i class="fa-solid fa-bars"></i></button>
         </div>
         <div class="col-auto ">
-          <a class="navbar-brand m-0 p-0" routerLink="/login">
+          <a class="btn marca m-0 p-0" routerLink="/login">
             <div class="row">
                 <div class="col-auto"><span class="logo-icon"><img src="assets/img/logo.webp" class="mx-100" alt=""></span></div>
-                <div class="col ps-0 align-self-center lh-16">
-                    <div class="fw-normal color-2 fs-14">Creatividad</div>
-                    <div class="fs-12 text-secondary fw-normal">Innovación</div>
-                    <div class="fs-12 text-secondary fw-normal">Sociedad</div>
+                <div class="col ps-0 align-self-center lh-16 ">
+                    <div class="fw-normal color-2 fs-14 text-start">CIAF</div>
+                    <div class="fs-12 text-secondary fw-normal">Educación </div>
                 </div>
             </div>
           </a>
@@ -46,11 +45,11 @@
                     <img src="assets/img/null.webp" alt="" id="userphotoonboarding2" style="display: none;">
                 </figure>
             </div>
-            <div class="col ps-0 align-self-center d-lg-block">
-                <p class="mb-0">
-                    <span class="text-dark username">{{user_name}}</span><br>
-                    <small class="small">United States</small>
-                </p>
+            <div class="col ps-0 d-lg-block">
+                  <span class="text-dark username">{{user_name}}</span><br>
+                  <div *ngIf="user_state==1; then thenBlock else elseBlock"></div>
+                  <ng-template #thenBlock class="text-start">Activo</ng-template>
+                  <ng-template #elseBlock>BLoqueado</ng-template>
             </div>
             <div class="col ps-0 align-self-center  d-lg-block">
               <i class="fa-solid fa-chevron-down"></i>
@@ -68,11 +67,16 @@
 
 </nav>
 
+
 <div class="d-flex" id="wrapper">
 
   <!-- Sidebar -->
   <div class="bg-light border-right sidebar" id="sidebar-wrapper"  [ngClass]="status ? 'hide' : 'show'">
-    <div class="sidebar-heading">Navegación </div>
+    <div class="sidebar-heading">
+      <div class="col ps-0 align-self-center lh-16 ">
+        <div class="fw-normal color-2 fs-12 ">Creatividad, Innovación & Sociedad</div>
+    </div>
+    </div>
     <div class="list-group list-group-flush">
       <a routerLink="/dashboard" class="list-group-item list-group-item-action bg-light"><i class="fa-solid fa-chart-simple"></i> Dashboard</a>
       <a routerLink="/usuarios" class="list-group-item list-group-item-action bg-light"><i class="fa-regular fa-user"></i> Usuarios</a>

@@ -45,6 +45,8 @@ export class ConectarApiService {
   }
   
   usuariosDelete(datos:any): Observable<any>{
+
+    
     let Options ={
     headers: new HttpHeaders ({
       'Content-Type': 'application/json',
@@ -62,5 +64,10 @@ export class ConectarApiService {
   miPerfilPut(datos:any): Observable<any>{
     return this.clienteHttp.put(this.API+ '/miperfil', datos);
   }
+
+  datosSelects(id: string | null): Observable<any>{
+    return this.clienteHttp.get(this.API+ '/datosselects.php?id='+id);
+  }
+
 
 }

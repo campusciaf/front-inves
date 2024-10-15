@@ -11,7 +11,8 @@ export class MenuComponent {
   constructor( private conectarApiService:ConectarApiService,){}
 
   $consulta: any;
-   user_name: any;
+  user_name: any;
+  user_state: any;
 
   ngOnInit() : void{
 
@@ -22,6 +23,7 @@ export class MenuComponent {
       this.$consulta=data;
       if(data.length==1){
         this.user_name=data[0]['user_name'];
+        this.user_state=data[0]['user_state'];
       }
       else{
         localStorage.removeItem('token');
@@ -42,8 +44,6 @@ export class MenuComponent {
   logAutUser() {
     localStorage.removeItem('token');
     this.router.navigate(['/login'])
-
-
   }
 
   setThema(t: string) {

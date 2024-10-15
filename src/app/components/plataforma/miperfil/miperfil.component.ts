@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
 import { ConectarApiService } from 'src/app/servicios/conectar-api.service';
 import Swal from 'sweetalert2';
 
@@ -13,17 +12,20 @@ export class MiperfilComponent {
   
   formEditar: FormGroup = this.formBuilder.group({});
   datosUsuario: any;
-
+  datosSelect: any;
+  datosSelect2: any;
+  datosSelect3: any;
 
   constructor(
     private conectarApiService:ConectarApiService,
-    private _route:ActivatedRoute,
-    private formBuilder: FormBuilder,
-    private router:Router,
+    private formBuilder: FormBuilder
   ){
 
     this.formEditar = this.formBuilder.group({
       user_name: ['', [Validators.required, Validators.minLength(6)]],
+      id_workplace: ['', [Validators.required, Validators.email]],
+      id_typejob: ['', [Validators.required, Validators.email]],
+      id_title: ['', [Validators.required, Validators.email]],
       user_email: ['', [Validators.required, Validators.email]],
       user_tel: ['', [Validators.required, Validators.minLength(6)]],
       firstname: ['', [Validators.required, Validators.minLength(6)]],
@@ -40,18 +42,32 @@ export class MiperfilComponent {
   }
 
   ngOnInit() {
+   
+    this.conectarApiService.datosSelects("workplace").subscribe((data) => {
+      this.datosSelect=data;
+    });
+    this.conectarApiService.datosSelects("typejob").subscribe((data) => {
+      this.datosSelect2=data;
+    });
+    this.conectarApiService.datosSelects("title").subscribe((data) => {
+      this.datosSelect3=data;
+    });
+
+    
+
     let idnum=localStorage.getItem('idnum');
 
     this.conectarApiService.miPerfil(idnum).subscribe((data) => {
       this.datosUsuario=data;
-
-
       this.formEditar = new FormGroup({
         'id_user': new FormControl(this.datosUsuario[0]["id_user"]),
         'user_name': new FormControl(this.datosUsuario[0]["user_name"]),
         'user_email': new FormControl(this.datosUsuario[0]["user_email"]),
         'user_tel': new FormControl(this.datosUsuario[0]["user_tel"]),
         'user_state': new FormControl(this.datosUsuario[0]["user_state"]),
+        'id_workplace': new FormControl(this.datosUsuario[0]["id_workplace"]),
+        'id_typejob': new FormControl(this.datosUsuario[0]["id_typejob"]),
+        'id_title': new FormControl(this.datosUsuario[0]["id_title"]),
         'firstname': new FormControl(this.datosUsuario[0]["firstname"]),
         'middlename': new FormControl(this.datosUsuario[0]["middlename"]),
         'lastname': new FormControl(this.datosUsuario[0]["lastname"]),
@@ -61,8 +77,6 @@ export class MiperfilComponent {
         'codezip': new FormControl(this.datosUsuario[0]["codezip"]),
         'token':new FormControl(localStorage.getItem('token')),
       });
-
-
     });
   }
 
@@ -82,6 +96,7 @@ export class MiperfilComponent {
           });
         }
     });
+
     
   }
 

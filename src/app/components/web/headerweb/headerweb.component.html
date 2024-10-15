@@ -1,25 +1,60 @@
-<div class="coverimg h-100 w-100 top-0 start-0 position-absolute" id="image-daytime" style="background-image: url(assets/img/bg-1.webp);">
-    <div class="overlay"></div>
-    <img src="assets/img/bg-1.webp" alt="" class="w-100" style="display: none;">
-  </div>
+
   
   <header class="header">
     <!-- Fixed navbar -->
-    <nav class="navbar fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" routerLink="/login">
+    <nav class="navbar fixed-top row mx-0 px-0">
+
+        <div class="col-xl-2 col-6 marca">
+            <a class="btn" routerLink="/home">
                 <div class="row">
                     <div class="col-auto"><span class="logo-icon"><img src="assets/img/logo.webp" class="mx-100" alt=""></span></div>
                     <div class="col ps-0 align-self-center">
-                        <div class="fw-normal text-white fs-4">CIAF</div>
-                        <div class="fs-6 text-secondary fw-normal">Centro investigaciones</div>
+                        <div class="col ps-0 align-self-center lh-16">
+                            <div class="fw-normal color-2 fs-14 text-start">CIAF</div>
+                            <div class="fs-12 text-secondary fw-normal text-start">Educación</div>
+                        </div>
                     </div>
                 </div>
             </a>
-            <div>
-                <a routerLink="/registro" class="btn btn-link text-white text-center"> <i class="fa-regular fa-circle-user"></i> <span class="d-lg-inline-block"> Registro</span></a>
-                <a routerLink="/login" class="btn btn-link text-white text-center"><i class="fa-solid fa-right-to-bracket"></i> <span class="d-lg-inline-block"> Ingresar</span></a>
-            </div>
         </div>
+        
+        <label for="show-menu" class="col-2 show-menu"><i class="fa-solid fa-bars"></i></label>
+  
+
+        <div class="col-xl-8 col-12 m-0 p-0">
+            <input type="checkbox" id="show-menu" role="button">
+            <ul id="menu" class="m-0 p-0">
+                <li><a routerLink="/home">Inicio</a></li>
+                <li>
+                    <a href="#">Revistas ￬</a>
+                    <ul class="hidden">
+                        <li><a href="#">Revistas activas</a></li>
+                        <li><a href="#">Web & Diseño grafico</a></li>
+                        <li><a href="#">Ilustracion</a></li>
+                    </ul>
+                </li>
+                <li><a routerLink="/home">Temas</a></li>
+                <li>
+                    <a href="#">Información ￬</a>
+                    <ul class="hidden">
+                        <li><a href="#">Quienes somos</a></li>
+                        <li><a href="#">Que hacemos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contactos</a></li>
+            </ul>
+        </div>
+
+        <div class="col-xl-2 col-12 text-end">
+            <a routerLink="/registro" class="mx-2 link-web text-center"> <i class="fa-regular fa-circle-user"></i> <span class="d-lg-inline-block"> Registro</span></a>
+            <a routerLink="/login" class="mx-2 link-web text-center"><i class="fa-solid fa-right-to-bracket"></i> <span class="d-lg-inline-block"> Ingresar</span></a>
+        </div>
+
+        
+        
     </nav>
+
+    
+
   </header>

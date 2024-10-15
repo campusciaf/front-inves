@@ -27,6 +27,8 @@ import { UsuariosComponent } from './components/plataforma/usuarios/usuarios.com
 import { UsuarioeditarComponent } from './components/plataforma/usuarioeditar/usuarioeditar.component';
 import { DataTablesModule } from 'angular-datatables';
 import { MiperfilComponent } from './components/plataforma/miperfil/miperfil.component';
+import { HomeComponent } from './components/home/home.component';
+import { SubmenuComponent } from './components/submenu/submenu.component';
 
 
 
@@ -42,7 +44,9 @@ import { MiperfilComponent } from './components/plataforma/miperfil/miperfil.com
     MenuComponent,
     UsuariosComponent,
     UsuarioeditarComponent,
-    MiperfilComponent
+    MiperfilComponent,
+    HomeComponent,
+    SubmenuComponent
   ],
   imports: [
     DataTablesModule,

@@ -8,6 +8,7 @@ html, body { height: 100%; }
     --bg-w-2: #001550;
     --bg-body: #eef3fc;
     --bg-1: 238,243,252;
+    --bg-11:255, 255, 255;
     --bg-2: #fff;
     --bg-3: #5c6798;
     --bg-4: #001550;
@@ -19,7 +20,10 @@ html, body { height: 100%; }
 }
 
 :root.dark {
-    --bg-body: #000;
+    --bg-body: #252e53;
+    --bg-1: 2, 4, 12;
+    --bg-11:0, 0, 0;
+    --bg-2: #0f1427;
 }
 
 body { 
@@ -34,10 +38,13 @@ body {
 
 .header > .navbar {
 
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(238, 243, 252, 0.8) 100%);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     border-radius: 0 0 20px 20px;
+    padding: 0px !important;
 }
-.navbar-brand .logo-icon {
+
+.marca .logo-icon {
     padding: 5px;
     line-height: 40px;
     border-radius: 10px;
@@ -45,13 +52,10 @@ body {
     text-align: center;
     background-color: var(--bg-w-2);
     width: 50px;
+}
 
-}
 .logo-icon img{
-width: 20px;
-}
-.navbar{
-    background: linear-gradient(180deg, rgba(0, 21, 80, 0.95) 0%, rgba(var(--bg-1), 0.8) 100%);
+    width: 20px;
 }
 
 .coverimg, .product-tour-js-single-step .product-tour-js-image {
@@ -63,13 +67,24 @@ width: 20px;
     background-position: 50% 50%;
     z-index: -1;
 }
+.btn-ciaf{
+    background-color: var(--bg-w-2);
+    color: var(--adminux-theme-color);
+    box-shadow: 0 4px 10px rgba(var(--adminux-theme-rgb), 0.4);
+}
+.btn-ciaf:hover{
+    background-color: #02092c;
+}
 
+.link-web{
+    color: #6c757d;
+}
 .footer {
     padding-top: 0.75rem;
     padding-bottom: 0.75em;
     z-index: 1;
     flex-shrink: 0;
-    background-color: var(--bg-3);
+    background-color: var(--bg-w-2);
     border-radius: 20px 20px 0 0;
     position: absolute;
     bottom: 0px;
@@ -94,12 +109,14 @@ width: 20px;
     background-color: rgba(var(--bg-ico), 0.15) !important;
     color: var(--text-ico-1);
 }
+.bg-2{
+    background-color: var(--bg-2) !important;
+}
 
 .nav-plataforma {
-
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     border-radius: 0 0 20px 20px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(var(--bg-1), 0.8) 100%);
+    background: linear-gradient(180deg, rgba(var(--bg-11), 0.95) 0%, rgba(var(--bg-1), 0.8) 100%);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     border-radius: 0 0 20px 20px;
 }
@@ -170,6 +187,10 @@ width: 20px;
 .lh-16 {
     line-height: 16px !important;
 }
+
+.lh-20 {
+    line-height: 20px !important;
+}
 .card-header{
     padding-top: 20px;
     background-color: var(--bg-2) !important; 
@@ -198,4 +219,32 @@ width: 20px;
     border-bottom: 0;
     border-left: .3em solid transparent;
     display: none;
+}
+/****** campos input *********/
+
+.form-group {
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 0px 0px #ced4da;
+    -webkit-box-shadow: 0 1px 0px 0px #ced4da;
+    -moz-box-shadow: 0 1px 0px 0px #ced4da;
+}
+
+/**************************** estilos web *****************************/
+.text-w-1{
+
+}
+.bg-w-1{
+    background-color: var(--bg-w-2);
+}
+.frase{
+    position: absolute;
+    top:24%;
+    left: 6%;
+}
+.submenu{
+    margin-top: -72px;
+}
+.contenido{
+
+    margin-top: 72px;
 }

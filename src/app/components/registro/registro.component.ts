@@ -23,6 +23,7 @@ export class RegistroComponent {
   registro() {
     const user = { user_email: this.user_email, user_password: this.user_password, repeat_password: this.repeat_password };
     this.conectarApiService.registro(user).subscribe((data) => {
+    console.log(data)
       if(data.status == "ok"){
         Swal.fire({
           position: "top-end",
@@ -31,7 +32,8 @@ export class RegistroComponent {
           showConfirmButton: false,
           timer: 2500
         });
-        this.router.navigate(['login']);
+        this.router.navigate(['/login']);
+        
       }else{
         Swal.fire({
           position: "top-end",
